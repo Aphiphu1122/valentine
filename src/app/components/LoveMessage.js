@@ -12,6 +12,10 @@ export default function LoveMessage() {
     "/image2.png",
     "/image3.png",
     "/image4.png",
+    "/image5.png",
+    "/image9.png",
+    "/image7.jpg",
+    "/image10.png",
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
