@@ -61,7 +61,7 @@ export default function LoveMessage() {
       <h2 className="text-3xl text-pink-600 font-bold">To My Forever Love Bibi ❤️</h2>
       <p className="text-gray-700 mt-4 italic">"Thank you so much for coming into my life." 💖</p>
 
-
+      {/* ปุ่มอยู่ตรงกลาง */}
       <div className="flex justify-center mt-6">
         <button
           onClick={toggleMusic}
