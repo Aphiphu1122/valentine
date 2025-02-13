@@ -20,7 +20,7 @@ export default function Home() {  // ✅ เปลี่ยนเป็น LoveP
           onClick={() => router.push("/love")}  // ✅ ปุ่มกดไปหน้า love/page.js
           className="px-6 py-3 bg-green-500 text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-green-700 transition"
         >
-          ลองกดดู นะจ้ะ 💚
+          ลองกดดูนะจ้ะ HUG FOR BIBI🤍
         </button>
       </div>
     </div>
