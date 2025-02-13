@@ -1,16 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function LoveMessage() {
   const [play, setPlay] = useState(false);
-  const audio = typeof Audio !== "undefined" && new Audio("/love-song.mp3");
+  const audioRef = useRef(null);
+
+  // กำหนด Audio แค่ครั้งเดียวตอนโหลด Component
+  useEffect(() => {
+    audioRef.current = new Audio("/love-song.mp3");
+
+    // Cleanup เมื่อ Component ถูกปิด
+    return () => {
+      audioRef.current.pause();
+      audioRef.current = null;
+    };
+  }, []);
 
   const toggleMusic = () => {
     if (play) {
-      audio.pause();
+      audioRef.current.pause();
     } else {
-      audio.play();
+      audioRef.current.play();
     }
     setPlay(!play);
   };
